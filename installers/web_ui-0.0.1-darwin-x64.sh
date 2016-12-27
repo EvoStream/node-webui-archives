@@ -34,8 +34,8 @@ if [ $? != 0 ]; then echo 'web_ui: INSTALLATION FAILED! Please see errors below:
 
 echo "web_ui: SUCCESSFUL INSTALLATION!" 
 
-# Change to where evowebservices is
-cd node_modules/web_ui
+# Change to where webui is
+cd node_modules/ems_web_ui
 
 # Start web_ui
 echo 'Starting web_ui...'
