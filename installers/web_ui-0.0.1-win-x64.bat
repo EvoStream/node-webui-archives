@@ -7,12 +7,13 @@ echo changing directory to node_webui\......
 CD node_webui
 
 echo getting webui on github...
-call npm install --save https://github.com/EvoStream/node-webui/tarball/develop
+call npm install --save https://github.com/EvoStream/node-webui/tarball/codefix01
 
 echo changing directory to webui....
 cd node_modules\ems_web_ui
 
 echo starting webui using npm....
+call npm install
 call npm start
 
 echo.

@@ -29,13 +29,17 @@ fi
 
 # Install dependencies
 echo 'Installing NPM web_ui...'
-npm install --save https://github.com/EvoStream/node-webui/tarball/develop
+npm install --save https://github.com/EvoStream/node-webui/tarball/codefix01
 if [ $? != 0 ]; then echo 'web_ui: INSTALLATION FAILED! Please see errors below:'; exit 1; fi
 
 echo "web_ui: SUCCESSFUL INSTALLATION!" 
 
 # Change to where webui is
 cd node_modules/ems_web_ui
+
+# Install web_ui modules
+echo 'Installing web_ui modules...'
+npm install
 
 # Start web_ui
 echo 'Starting web_ui...'
