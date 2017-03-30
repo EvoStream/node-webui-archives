@@ -27,23 +27,25 @@ else
     echo "Node.js already exists" 
 fi 
 
-# Install dependencies
-echo 'Installing NPM web_ui...'
-npm install --save https://github.com/EvoStream/node-webui/tarball/codefix01
-if [ $? != 0 ]; then echo 'web_ui: INSTALLATION FAILED! Please see errors below:'; exit 1; fi
+echo 'Getting the ems_web_ui...'
+npm install https://github.com/EvoStream/node-webui/tarball/codefix01
+if [ $? != 0 ]; then echo 'ems_web_ui: INSTALLATION FAILED! Please see errors below:'; exit 1; fi
 
-echo "web_ui: SUCCESSFUL INSTALLATION!"
+echo "ems_web_ui: SUCCESSFUL INSTALLATION!" 
 
-# Change to where webui is
-cd node_modules/ems_web_ui
+cd node_modules
+find . -type d -maxdepth 1 -not -name 'ems_web_ui' -exec rm -rf {} \;
 
-# Install web_ui modules
+# Change to where ems_web_ui is
+cd ems_web_ui
+
+# Install ems_web_ui modules
 echo 'Installing web_ui modules...'
 npm install
 
-# Start web_ui
-echo 'Starting web_ui...'
+# Start ems_web_ui
+echo 'Starting ems_web_ui...'
 npm start 
-if [ $? != 0 ]; then echo 'Could not start web_ui!'; exit 1; fi
+if [ $? != 0 ]; then echo 'Could not start ems_web_ui!'; exit 1; fi
 
 exit 0;
