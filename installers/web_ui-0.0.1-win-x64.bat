@@ -7,7 +7,7 @@ echo changing directory to node_webui\......
 CD node_webui
 
 echo getting webui on github...
-call npm install --save https://github.com/EvoStream/node-webui/tarball/codefix01
+call npm install --save https://github.com/EvoStream/node-webui/tarball/codefix02
 
 for /D %%D in ("node_modules\*.*") do (
     if /I not "%%~nxD"=="ems_web_ui" (

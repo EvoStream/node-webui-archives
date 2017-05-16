@@ -29,7 +29,7 @@ fi
 
 # Install dependencies
 echo 'Getting the ems_web_ui...'
-npm install https://github.com/EvoStream/node-webui/tarball/codefix01
+npm install https://github.com/EvoStream/node-webui/tarball/codefix02
 if [ $? != 0 ]; then echo 'ems_web_ui: INSTALLATION FAILED! Please see errors below:'; exit 1; fi
 
 echo "ems_web_ui: SUCCESSFUL INSTALLATION!" 
